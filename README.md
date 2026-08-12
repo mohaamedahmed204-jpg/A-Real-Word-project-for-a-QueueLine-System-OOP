@@ -130,6 +130,7 @@ Sequentially prints formatted physical-style tickets including Ticket ID, Timest
 ### Output
 
 Pay Bills Queue Info:
+                                
                                 ______________________________________
 
                                             Queue Info                  
@@ -200,6 +201,7 @@ Pay Bills Queue Info:
 
 
 Pay Bills Queue After Serving One client
+                                
                                 ______________________________________
 
                                             Queue Info                  
@@ -213,6 +215,7 @@ Pay Bills Queue After Serving One client
 
 
 Subscriptions Queue Info:
+                                
                                 ______________________________________
 
                                             Queue Info                  
@@ -263,6 +266,7 @@ Subscriptions Queue Info:
 
 
 Subscriptions Queue After Serving One client
+                                
                                 ______________________________________
 
                                             Queue Info                  
