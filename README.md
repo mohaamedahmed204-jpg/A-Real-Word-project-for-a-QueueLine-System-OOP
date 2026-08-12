@@ -1,1 +1,119 @@
-# QueueLine-System-OOP
+# 🎟️ QueueLine System
+
+A lightweight, robust, and clean C++ Object-Oriented implementation of a multi-queue ticketing system. This system simulates real-world queue line operations (such as banks, customer service centers, or hospitals), tracking client waiting times, dynamic queue positions, and ticket generation with precise metrics.
+
+## 📌 Overview
+
+The `clsQueueLine` class manages independent customer service lines by abstracting ticket issuance, dynamic service time recalculation, and queue visualization. It leverages C++ Standard Template Library (`std::queue`) and modern C++17 inline static features to maintain global queue metrics alongside instance-specific ticket lifecycles.
+
+Key highlights:
+
+  1. Dynamic waiting time recalculation for remaining clients upon serving a ticket.
+
+  2. Bi-directional visual printing of the queue (Right-to-Left and Left-to-Right).
+
+  3. Encapsulated state tracking for total tickets issued, currently waiting clients, and served clients.
+
+## 🏗 Architecture & Design
+
+### Data Structures
+
+`stLineInfo` (Internal Ticket Payload)
+
+    struct stLineInfo {
+        string _DateAndTime;     // Timestamp of ticket generation
+        size_t _WaitingClients;  // Number of clients ahead at generation time
+        size_t _ServeTime;       // Total estimated waiting time in minutes
+    };
+
+### Class Attributes
+
+Instance Scope: `_Pre` (Line prefix e.g., "A", "B"), `_WaitingTime` (Average serve time per client in minutes), `qu` (Queue of `stLineInfo`).
+
+Static Scope: `_WaitingClients`, `_TotalTickets`, `_ServedClients` (C++17 `static inline` counters).
+
+## ⚡ Core Operations
+
+### 1. IssueTicket()
+
+Captures current snapshot data: `_WaitingClients` ahead of the client, total estimated serve time, and a timestamp via `clsDate::GetDateTimeNow()`.
+
+Pushes a structured ticket payload (`stLineInfo`) into the client processing queue (`qu`).
+
+Increments global line statistics (`_WaitingClients` and `_TotalTickets`).
+
+### 2. ServeNextClient()
+
+Pops the front client from the queue.
+
+Updates status counters by incrementing `_ServedClients` and decrementing `_WaitingClients`.
+
+Dynamic Recalculation: Iterates through remaining queue items to decrease each client's remaining serve time (`_ServeTime`) by `_WaitingTime` units, ensuring accurate real-time queue states.
+
+### 3. PrintInfo()
+
+Renders a clean formatted panel displaying operational metrics for the current queue line instance:
+
+  Line Prefix (`_Pre`)
+
+  Total Tickets Issued (`_TotalTickets`)
+
+  Total Served Clients (`_ServedClients`)
+
+  Active Waiting Clients (`_WaitingClients`)
+
+
+### 4. PrintTicketsLineRTL() & PrintTicketsLineLTR()
+
+RTL (Right-to-Left): Visualizes client progression into the service desk (`A1 <-- A2 <-- A3`).
+
+LTR (Left-to-Right): Visualizes the queue from head to tail (`A3 --> A2 --> A1`).
+
+### 5. PrintAllTickets()
+
+Creates an isolated pass-by-value copy of the client queue.
+
+Sequentially prints formatted physical-style tickets including Ticket ID, Timestamp, Waiting Clients ahead, and Estimated Serve Time without modifying the live queue state.
+
+## 💡 Key Concepts Demonstrated
+
+Object-Oriented Programming (`OOP`): Deep usage of encapsulation, constructor initialization, access specifiers (`private` / `public`), and modular design.
+
+Dynamic State Management: Real-time queue traversal to adjust ticket parameters (`_ServeTime`) dynamically upon popping.
+
+Non-Destructive Iteration: Copying container states (`queue<stLineInfo> q = qu;`) for read-only visualization operations to preserve runtime data integrity.
+
+Static Class Members: Efficient memory utilization using static inline class attributes to share state across operations.
+
+## 🛠 Technologies
+
+Language: C++17 or higher (utilizes `static inline` member variable initialization).
+
+STL Components: <`queue`>, <`iostream`>, <`string`>.
+
+Custom Dependencies: `clsDate.h` (Used for date and timestamp generation).
+
+## 🙏 Gratitude
+
+Programming Advices Platform
+Dr. Mohammed Abu-Hadhoud
+
+[ https://programmingadvices.com ]
+
+He was not just an instructor.
+
+He was:
+
+  A mentor
+  A coach
+  A guide
+  A motivator
+  A teacher who understands timing
+
+Because the real secret of success in programming is:
+
+  Proper progression
+  Correct guidance
+  The right timing to learn each concept
+
+And that is exactly what we experienced
