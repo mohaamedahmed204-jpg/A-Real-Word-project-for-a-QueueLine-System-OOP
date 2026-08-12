@@ -1,5 +1,5 @@
 #include <iostream>
-#include "DS/clsQueueLine.h"
+#include "clsQueueLine.h"
 
 using namespace std;
 
