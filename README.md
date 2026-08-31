@@ -1,4 +1,4 @@
-# 🎟️ QueueLine System
+# 🎟️ QueueLine System.           
 
 A lightweight, robust, and clean C++ Object-Oriented implementation of a multi-queue ticketing system. This system simulates real-world queue line operations (such as banks, customer service centers, or hospitals), tracking client waiting times, dynamic queue positions, and ticket generation with precise metrics.
 
