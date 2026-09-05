@@ -307,16 +307,16 @@ He was not just an instructor.
 
 He was:
 
-  A mentor
-  A coach
-  A guide
-  A motivator
-  A teacher who understands timing
+    A mentor
+    A coach
+    A guide
+    A motivator
+    A teacher who understands timing
 
 Because the real secret of success in programming is:
 
-  Proper progression
-  Correct guidance
-  The right timing to learn each concept
+    Proper progression
+    Correct guidance
+    The right timing to learn each concept
 
 And that is exactly what we experienced
