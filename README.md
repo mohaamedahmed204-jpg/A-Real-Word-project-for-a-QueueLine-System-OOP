@@ -298,7 +298,7 @@ Custom Dependencies: `clsDate.h` (Used for date and timestamp generation).
 
 ## 🙏 Gratitude
 
-Programming Advices Platform
+* Programming Advices Platform
 Dr. Mohammed Abu-Hadhoud
 
 [ https://programmingadvices.com ]
