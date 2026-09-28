@@ -307,11 +307,11 @@ He was not just an instructor.
 
 He was:
 
-    A mentor
-    A coach
-    A guide
-    A motivator
-    A teacher who understands timing
+* A mentor
+* A coach
+* A guide
+* A motivator
+* A teacher who understands timing
 
 Because the real secret of success in programming is:
 
